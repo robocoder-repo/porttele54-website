@@ -331,3 +331,267 @@
 330 silly placeDep node_modules/surge uri-js@4.4.1 OK for: ajv@6.12.6 want: ^4.2.2
 331 silly fetch manifest punycode@^2.1.0
 332 silly packumentCache full:https://registry.npmjs.org/punycode cache-miss
+333 http fetch GET 200 https://registry.npmjs.org/punycode 5ms (cache hit)
+334 silly packumentCache full:https://registry.npmjs.org/punycode set size:61302 disposed:false
+335 silly placeDep node_modules/surge assert-plus@1.0.0 OK for: http-signature@1.2.0 want: ^1.0.0
+336 silly placeDep node_modules/surge jsprim@1.4.2 OK for: http-signature@1.2.0 want: ^1.2.2
+337 silly placeDep node_modules/surge sshpk@1.18.0 OK for: http-signature@1.2.0 want: ^1.7.0
+338 silly fetch manifest extsprintf@1.3.0
+339 silly packumentCache full:https://registry.npmjs.org/extsprintf cache-miss
+340 silly fetch manifest json-schema@0.4.0
+341 silly packumentCache full:https://registry.npmjs.org/json-schema cache-miss
+342 silly fetch manifest verror@1.10.0
+343 silly packumentCache full:https://registry.npmjs.org/verror cache-miss
+344 silly fetch manifest asn1@~0.2.3
+345 silly packumentCache full:https://registry.npmjs.org/asn1 cache-miss
+346 silly fetch manifest dashdash@^1.12.0
+347 silly packumentCache full:https://registry.npmjs.org/dashdash cache-miss
+348 silly fetch manifest getpass@^0.1.1
+349 silly packumentCache full:https://registry.npmjs.org/getpass cache-miss
+350 silly fetch manifest safer-buffer@^2.0.2
+351 silly packumentCache full:https://registry.npmjs.org/safer-buffer cache-miss
+352 http fetch GET 200 https://registry.npmjs.org/extsprintf 51ms (cache miss)
+353 silly packumentCache full:https://registry.npmjs.org/extsprintf set size:undefined disposed:false
+354 silly fetch manifest jsbn@~0.1.0
+355 silly packumentCache full:https://registry.npmjs.org/jsbn cache-miss
+356 http fetch GET 200 https://registry.npmjs.org/getpass 54ms (cache miss)
+357 silly packumentCache full:https://registry.npmjs.org/getpass set size:undefined disposed:false
+358 silly fetch manifest tweetnacl@~0.14.0
+359 silly packumentCache full:https://registry.npmjs.org/tweetnacl cache-miss
+360 http fetch GET 200 https://registry.npmjs.org/verror 62ms (cache miss)
+361 silly packumentCache full:https://registry.npmjs.org/verror set size:undefined disposed:false
+362 silly fetch manifest ecc-jsbn@~0.1.1
+363 silly packumentCache full:https://registry.npmjs.org/ecc-jsbn cache-miss
+364 http fetch GET 200 https://registry.npmjs.org/json-schema 66ms (cache miss)
+365 silly packumentCache full:https://registry.npmjs.org/json-schema set size:undefined disposed:false
+366 silly fetch manifest bcrypt-pbkdf@^1.0.0
+367 silly packumentCache full:https://registry.npmjs.org/bcrypt-pbkdf cache-miss
+368 http fetch GET 200 https://registry.npmjs.org/safer-buffer 70ms (cache miss)
+369 silly packumentCache full:https://registry.npmjs.org/safer-buffer set size:undefined disposed:false
+370 http fetch GET 200 https://registry.npmjs.org/asn1 74ms (cache miss)
+371 silly packumentCache full:https://registry.npmjs.org/asn1 set size:undefined disposed:false
+372 http fetch GET 200 https://registry.npmjs.org/dashdash 75ms (cache miss)
+373 silly packumentCache full:https://registry.npmjs.org/dashdash set size:undefined disposed:false
+374 http fetch GET 200 https://registry.npmjs.org/jsbn 37ms (cache miss)
+375 silly packumentCache full:https://registry.npmjs.org/jsbn set size:undefined disposed:false
+376 http fetch GET 200 https://registry.npmjs.org/tweetnacl 42ms (cache miss)
+377 silly packumentCache full:https://registry.npmjs.org/tweetnacl set size:undefined disposed:false
+378 http fetch GET 200 https://registry.npmjs.org/ecc-jsbn 43ms (cache miss)
+379 silly packumentCache full:https://registry.npmjs.org/ecc-jsbn set size:undefined disposed:false
+380 http fetch GET 200 https://registry.npmjs.org/bcrypt-pbkdf 74ms (cache miss)
+381 silly packumentCache full:https://registry.npmjs.org/bcrypt-pbkdf set size:undefined disposed:false
+382 silly placeDep node_modules/surge extsprintf@1.3.0 OK for: jsprim@1.4.2 want: 1.3.0
+383 silly placeDep node_modules/surge json-schema@0.4.0 OK for: jsprim@1.4.2 want: 0.4.0
+384 silly placeDep node_modules/surge verror@1.10.0 OK for: jsprim@1.4.2 want: 1.10.0
+385 silly fetch manifest core-util-is@1.0.2
+386 silly packumentCache full:https://registry.npmjs.org/core-util-is cache-miss
+387 http fetch GET 200 https://registry.npmjs.org/core-util-is 36ms (cache miss)
+388 silly packumentCache full:https://registry.npmjs.org/core-util-is set size:undefined disposed:false
+389 silly placeDep node_modules/surge mime-db@1.52.0 OK for: mime-types@2.1.35 want: 1.52.0
+390 silly placeDep node_modules/surge asn1@0.2.6 OK for: sshpk@1.18.0 want: ~0.2.3
+391 silly placeDep node_modules/surge bcrypt-pbkdf@1.0.2 OK for: sshpk@1.18.0 want: ^1.0.0
+392 silly placeDep node_modules/surge dashdash@1.14.1 OK for: sshpk@1.18.0 want: ^1.12.0
+393 silly placeDep node_modules/surge ecc-jsbn@0.1.2 OK for: sshpk@1.18.0 want: ~0.1.1
+394 silly placeDep node_modules/surge getpass@0.1.7 OK for: sshpk@1.18.0 want: ^0.1.1
+395 silly placeDep node_modules/surge jsbn@0.1.1 OK for: sshpk@1.18.0 want: ~0.1.0
+396 silly placeDep node_modules/surge safer-buffer@2.1.2 OK for: sshpk@1.18.0 want: ^2.0.2
+397 silly placeDep node_modules/surge tweetnacl@0.14.5 OK for: sshpk@1.18.0 want: ~0.14.0
+398 silly fetch manifest safer-buffer@~2.1.0
+399 silly packumentCache full:https://registry.npmjs.org/safer-buffer cache-miss
+400 silly fetch manifest tweetnacl@^0.14.3
+401 silly packumentCache full:https://registry.npmjs.org/tweetnacl cache-miss
+402 silly fetch manifest safer-buffer@^2.1.0
+403 silly packumentCache full:https://registry.npmjs.org/safer-buffer cache-miss
+404 http fetch GET 200 https://registry.npmjs.org/tweetnacl 9ms (cache hit)
+405 silly packumentCache full:https://registry.npmjs.org/tweetnacl set size:79790 disposed:false
+406 http fetch GET 200 https://registry.npmjs.org/safer-buffer 12ms (cache hit)
+407 silly packumentCache full:https://registry.npmjs.org/safer-buffer set size:18521 disposed:false
+408 http fetch GET 200 https://registry.npmjs.org/safer-buffer 11ms (cache hit)
+409 silly packumentCache full:https://registry.npmjs.org/safer-buffer set size:18521 disposed:false
+410 silly packumentCache full:https://registry.npmjs.org/safer-buffer dispose
+411 silly placeDep node_modules/surge emoji-regex@8.0.0 OK for: string-width@4.2.3 want: ^8.0.0
+412 silly placeDep node_modules/surge is-fullwidth-code-point@3.0.0 OK for: string-width@4.2.3 want: ^3.0.0
+413 silly placeDep node_modules/surge strip-ansi@6.0.1 OK for: string-width@4.2.3 want: ^6.0.1
+414 silly fetch manifest ansi-regex@^5.0.1
+415 silly packumentCache full:https://registry.npmjs.org/ansi-regex cache-miss
+416 http fetch GET 200 https://registry.npmjs.org/ansi-regex 80ms (cache miss)
+417 silly packumentCache full:https://registry.npmjs.org/ansi-regex set size:undefined disposed:false
+418 silly placeDep node_modules/surge ansi-regex@5.0.1 OK for: strip-ansi@6.0.1 want: ^5.0.1
+419 silly placeDep node_modules/surge axios@1.7.3 OK for: surge-sdk@0.6.4 want: 1.7.3
+420 silly fetch manifest form-data@^4.0.0
+421 silly packumentCache full:https://registry.npmjs.org/form-data cache-miss
+422 silly fetch manifest proxy-from-env@^1.1.0
+423 silly packumentCache full:https://registry.npmjs.org/proxy-from-env cache-miss
+424 silly fetch manifest follow-redirects@^1.15.6
+425 silly packumentCache full:https://registry.npmjs.org/follow-redirects cache-miss
+426 http fetch GET 200 https://registry.npmjs.org/form-data 28ms (cache hit)
+427 silly packumentCache full:https://registry.npmjs.org/form-data set size:120220 disposed:false
+428 http fetch GET 200 https://registry.npmjs.org/proxy-from-env 37ms (cache miss)
+429 silly packumentCache full:https://registry.npmjs.org/proxy-from-env set size:undefined disposed:false
+430 http fetch GET 200 https://registry.npmjs.org/follow-redirects 48ms (cache miss)
+431 silly packumentCache full:https://registry.npmjs.org/follow-redirects set size:undefined disposed:false
+432 silly placeDep node_modules/surge follow-redirects@1.15.9 OK for: axios@1.7.3 want: ^1.15.6
+433 silly placeDep node_modules/surge/node_modules/axios form-data@4.0.1 OK for: axios@1.7.3 want: ^4.0.0
+434 silly placeDep node_modules/surge proxy-from-env@1.1.0 OK for: axios@1.7.3 want: ^1.1.0
+435 silly placeDep node_modules/surge split@1.0.1 OK for: surge-stream@0.6.4 want: ^1.0.1
+436 silly placeDep node_modules/surge surge-fstream-ignore@1.1.0 OK for: surge-stream@0.6.4 want: ^1.1.0
+437 silly placeDep node_modules/surge/node_modules/surge-stream surge-ignore@0.3.0 OK for: surge-stream@0.6.4 want: ^0.3.0
+438 silly placeDep node_modules/surge tarr@1.1.0 OK for: surge-stream@0.6.4 want: ^1.1.0
+439 silly fetch manifest through@2
+440 silly packumentCache full:https://registry.npmjs.org/through cache-miss
+441 silly fetch manifest fstream@1.0.12
+442 silly packumentCache full:https://registry.npmjs.org/fstream cache-miss
+443 silly fetch manifest inherits@2.0.4
+444 silly packumentCache full:https://registry.npmjs.org/inherits cache-miss
+445 silly fetch manifest minimatch@7.4.6
+446 silly packumentCache full:https://registry.npmjs.org/minimatch cache-miss
+447 silly fetch manifest block-stream@*
+448 silly packumentCache full:https://registry.npmjs.org/block-stream cache-miss
+449 silly fetch manifest fstream@>=1.0.12
+450 silly packumentCache full:https://registry.npmjs.org/fstream cache-miss
+451 silly fetch manifest inherits@2
+452 silly packumentCache full:https://registry.npmjs.org/inherits cache-miss
+453 http fetch GET 200 https://registry.npmjs.org/block-stream 75ms (cache miss)
+454 silly packumentCache full:https://registry.npmjs.org/block-stream set size:undefined disposed:false
+455 http fetch GET 200 https://registry.npmjs.org/through 83ms (cache miss)
+456 silly packumentCache full:https://registry.npmjs.org/through set size:undefined disposed:false
+457 http fetch GET 200 https://registry.npmjs.org/inherits 90ms (cache miss)
+458 silly packumentCache full:https://registry.npmjs.org/inherits set size:undefined disposed:false
+459 http fetch GET 200 https://registry.npmjs.org/fstream 96ms (cache miss)
+460 silly packumentCache full:https://registry.npmjs.org/fstream set size:undefined disposed:false
+461 http fetch GET 200 https://registry.npmjs.org/inherits 98ms (cache miss)
+462 silly packumentCache full:https://registry.npmjs.org/inherits set size:undefined disposed:false
+463 http fetch GET 200 https://registry.npmjs.org/fstream 97ms (cache miss)
+464 silly packumentCache full:https://registry.npmjs.org/fstream set size:undefined disposed:false
+465 http fetch GET 200 https://registry.npmjs.org/minimatch 103ms (cache miss)
+466 silly packumentCache full:https://registry.npmjs.org/minimatch set size:undefined disposed:false
+467 silly placeDep node_modules/surge through@2.3.8 OK for: split@1.0.1 want: 2
+468 silly placeDep node_modules/surge fstream@1.0.12 OK for: surge-fstream-ignore@1.1.0 want: 1.0.12
+469 silly placeDep node_modules/surge inherits@2.0.4 OK for: surge-fstream-ignore@1.1.0 want: 2.0.4
+470 silly placeDep node_modules/surge minimatch@7.4.6 OK for: surge-fstream-ignore@1.1.0 want: 7.4.6
+471 silly fetch manifest mkdirp@>=0.5 0
+472 silly packumentCache full:https://registry.npmjs.org/mkdirp cache-miss
+473 silly fetch manifest rimraf@2
+474 silly packumentCache full:https://registry.npmjs.org/rimraf cache-miss
+475 silly fetch manifest inherits@~2.0.0
+476 silly packumentCache full:https://registry.npmjs.org/inherits cache-miss
+477 silly fetch manifest graceful-fs@^4.1.2
+478 silly packumentCache full:https://registry.npmjs.org/graceful-fs cache-miss
+479 silly fetch manifest brace-expansion@^2.0.1
+480 silly packumentCache full:https://registry.npmjs.org/brace-expansion cache-miss
+481 http fetch GET 200 https://registry.npmjs.org/inherits 13ms (cache hit)
+482 silly packumentCache full:https://registry.npmjs.org/inherits set size:12925 disposed:false
+483 http fetch GET 200 https://registry.npmjs.org/mkdirp 35ms (cache miss)
+484 silly packumentCache full:https://registry.npmjs.org/mkdirp set size:undefined disposed:false
+485 http fetch GET 200 https://registry.npmjs.org/brace-expansion 45ms (cache miss)
+486 silly packumentCache full:https://registry.npmjs.org/brace-expansion set size:undefined disposed:false
+487 http fetch GET 200 https://registry.npmjs.org/rimraf 51ms (cache miss)
+488 silly packumentCache full:https://registry.npmjs.org/rimraf set size:undefined disposed:false
+489 http fetch GET 200 https://registry.npmjs.org/graceful-fs 62ms (cache miss)
+490 silly packumentCache full:https://registry.npmjs.org/graceful-fs set size:undefined disposed:false
+491 silly placeDep node_modules/surge graceful-fs@4.2.11 OK for: fstream@1.0.12 want: ^4.1.2
+492 silly placeDep node_modules/surge mkdirp@0.5.6 OK for: fstream@1.0.12 want: >=0.5 0
+493 silly placeDep node_modules/surge rimraf@2.7.1 OK for: fstream@1.0.12 want: 2
+494 silly fetch manifest glob@^7.1.3
+495 silly packumentCache full:https://registry.npmjs.org/glob cache-miss
+496 http fetch GET 200 https://registry.npmjs.org/glob 44ms (cache miss)
+497 silly packumentCache full:https://registry.npmjs.org/glob set size:undefined disposed:false
+498 silly placeDep node_modules/surge brace-expansion@2.0.1 OK for: minimatch@7.4.6 want: ^2.0.1
+499 silly fetch manifest balanced-match@^1.0.0
+500 silly packumentCache full:https://registry.npmjs.org/balanced-match cache-miss
+501 http fetch GET 200 https://registry.npmjs.org/balanced-match 31ms (cache miss)
+502 silly packumentCache full:https://registry.npmjs.org/balanced-match set size:undefined disposed:false
+503 silly placeDep node_modules/surge balanced-match@1.0.2 OK for: brace-expansion@2.0.1 want: ^1.0.0
+504 silly placeDep node_modules/surge glob@7.2.3 OK for: rimraf@2.7.1 want: ^7.1.3
+505 silly fetch manifest once@^1.3.0
+506 silly packumentCache full:https://registry.npmjs.org/once cache-miss
+507 silly fetch manifest inflight@^1.0.4
+508 silly packumentCache full:https://registry.npmjs.org/inflight cache-miss
+509 silly fetch manifest minimatch@^3.1.1
+510 silly packumentCache full:https://registry.npmjs.org/minimatch cache-miss
+511 silly fetch manifest fs.realpath@^1.0.0
+512 silly packumentCache full:https://registry.npmjs.org/fs.realpath cache-miss
+513 silly fetch manifest path-is-absolute@^1.0.0
+514 silly packumentCache full:https://registry.npmjs.org/path-is-absolute cache-miss
+515 http fetch GET 200 https://registry.npmjs.org/minimatch 15ms (cache hit)
+516 silly packumentCache full:https://registry.npmjs.org/minimatch set size:398328 disposed:false
+517 http fetch GET 200 https://registry.npmjs.org/once 37ms (cache miss)
+518 silly packumentCache full:https://registry.npmjs.org/once set size:undefined disposed:false
+519 http fetch GET 200 https://registry.npmjs.org/fs.realpath 40ms (cache miss)
+520 silly packumentCache full:https://registry.npmjs.org/fs.realpath set size:undefined disposed:false
+521 http fetch GET 200 https://registry.npmjs.org/inflight 57ms (cache miss)
+522 silly packumentCache full:https://registry.npmjs.org/inflight set size:undefined disposed:false
+523 http fetch GET 200 https://registry.npmjs.org/path-is-absolute 62ms (cache miss)
+524 silly packumentCache full:https://registry.npmjs.org/path-is-absolute set size:undefined disposed:false
+525 silly placeDep node_modules/surge fs.realpath@1.0.0 OK for: glob@7.2.3 want: ^1.0.0
+526 silly placeDep node_modules/surge inflight@1.0.6 OK for: glob@7.2.3 want: ^1.0.4
+527 silly placeDep node_modules/surge/node_modules/glob minimatch@3.1.2 OK for: glob@7.2.3 want: ^3.1.1
+528 silly placeDep node_modules/surge once@1.4.0 OK for: glob@7.2.3 want: ^1.3.0
+529 silly placeDep node_modules/surge path-is-absolute@1.0.1 OK for: glob@7.2.3 want: ^1.0.0
+530 silly fetch manifest wrappy@1
+531 silly packumentCache full:https://registry.npmjs.org/wrappy cache-miss
+532 silly fetch manifest brace-expansion@^1.1.7
+533 silly packumentCache full:https://registry.npmjs.org/brace-expansion cache-miss
+534 silly fetch manifest wrappy@1
+535 silly packumentCache full:https://registry.npmjs.org/wrappy cache-miss
+536 http fetch GET 200 https://registry.npmjs.org/brace-expansion 7ms (cache hit)
+537 silly packumentCache full:https://registry.npmjs.org/brace-expansion set size:42345 disposed:false
+538 http fetch GET 200 https://registry.npmjs.org/wrappy 35ms (cache miss)
+539 silly packumentCache full:https://registry.npmjs.org/wrappy set size:undefined disposed:false
+540 http fetch GET 200 https://registry.npmjs.org/wrappy 35ms (cache miss)
+541 silly packumentCache full:https://registry.npmjs.org/wrappy set size:undefined disposed:false
+542 silly placeDep node_modules/surge wrappy@1.0.2 OK for: inflight@1.0.6 want: 1
+543 silly placeDep node_modules/surge block-stream@0.0.9 OK for: tarr@1.1.0 want: *
+544 silly placeDep node_modules/surge psl@1.9.0 OK for: tough-cookie@2.5.0 want: ^1.1.28
+545 silly placeDep node_modules/surge punycode@2.3.1 OK for: tough-cookie@2.5.0 want: ^2.1.1
+546 silly placeDep node_modules/surge core-util-is@1.0.2 OK for: verror@1.10.0 want: 1.0.2
+547 silly placeDep node_modules/surge/node_modules/glob brace-expansion@1.1.11 OK for: minimatch@3.1.2 want: ^1.1.7
+548 silly fetch manifest concat-map@0.0.1
+549 silly packumentCache full:https://registry.npmjs.org/concat-map cache-miss
+550 http fetch GET 200 https://registry.npmjs.org/concat-map 57ms (cache miss)
+551 silly packumentCache full:https://registry.npmjs.org/concat-map set size:undefined disposed:false
+552 silly placeDep node_modules/surge concat-map@0.0.1 OK for: brace-expansion@1.1.11 want: 0.0.1
+553 silly reify moves {}
+554 verbose stack Error: EACCES: permission denied, mkdir '/usr/lib/node_modules/surge'
+554 verbose stack     at async mkdir (node:internal/fs/promises:858:10)
+554 verbose stack     at async /usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:624:20
+554 verbose stack     at async Promise.allSettled (index 0)
+554 verbose stack     at async [reifyPackages] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:325:11)
+554 verbose stack     at async Arborist.reify (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:142:5)
+554 verbose stack     at async Install.exec (/usr/lib/node_modules/npm/lib/commands/install.js:150:5)
+554 verbose stack     at async Npm.exec (/usr/lib/node_modules/npm/lib/npm.js:207:9)
+554 verbose stack     at async module.exports (/usr/lib/node_modules/npm/lib/cli/entry.js:74:5)
+555 error code EACCES
+556 error syscall mkdir
+557 error path /usr/lib/node_modules/surge
+558 error errno -13
+559 error Error: EACCES: permission denied, mkdir '/usr/lib/node_modules/surge'
+559 error     at async mkdir (node:internal/fs/promises:858:10)
+559 error     at async /usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:624:20
+559 error     at async Promise.allSettled (index 0)
+559 error     at async [reifyPackages] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:325:11)
+559 error     at async Arborist.reify (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:142:5)
+559 error     at async Install.exec (/usr/lib/node_modules/npm/lib/commands/install.js:150:5)
+559 error     at async Npm.exec (/usr/lib/node_modules/npm/lib/npm.js:207:9)
+559 error     at async module.exports (/usr/lib/node_modules/npm/lib/cli/entry.js:74:5) {
+559 error   errno: -13,
+559 error   code: 'EACCES',
+559 error   syscall: 'mkdir',
+559 error   path: '/usr/lib/node_modules/surge'
+559 error }
+560 error
+560 error The operation was rejected by your operating system.
+560 error It is likely you do not have the permissions to access this file as the current user
+560 error
+560 error If you believe this might be a permissions issue, please double-check the
+560 error permissions of the file and its containing directories, or try running
+560 error the command again as root/Administrator.
+561 silly unfinished npm timer reify 1729876681833
+562 silly unfinished npm timer reify:createSparse 1729876684007
+563 verbose cwd /home/user
+564 verbose os Linux 5.10.186+
+565 verbose node v20.18.0
+566 verbose npm  v10.8.2
+567 verbose exit -13
+568 verbose code -13
+569 error A complete log of this run can be found in: /home/user/.npm/_logs/2024-10-25T17_18_01_520Z-debug-0.log
