@@ -1,0 +1,973 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K S Sreehari Sharma</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 2s;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            z-index: 9999;
+        }
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        body.dark-mode {
+            background: linear-gradient(to right, #2c3e50, #34495e);
+            color: #f4f4f4;
+        }
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .dark-mode-toggle:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
+        .dark-mode-toggle i {
+            margin-right: 5px;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container { width: 95%; }
+            header #branding, header nav, header nav li { float: none; text-align: center; }
+            header li { padding: 0 10px; }
+            #showcase h1 { font-size: 40px; }
+            .info div { min-width: 100%; }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container { width: 90%; }
+            .info div { min-width: 45%; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+            animation: slideIn 1s;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #77aaff;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #77aaff;
+            font-weight: bold;
+        }
+        #showcase {
+            min-height: 400px;
+            background: url('showcase.jpg') no-repeat center center/cover;
+            text-align: center;
+            color: #fff;
+            animation: zoomIn 1s;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.5); }
+            to { transform: scale(1); }
+        }
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        #showcase p {
+            font-size: 20px;
+        }
+        .button {
+            display: inline-block;
+            color: #fff;
+            background: #333;
+            padding: 7px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+        .button:hover {
+            background: #77aaff;
+            color: #fff;
+        }
+        #main {
+            padding: 20px;
+            background: #fff;
+            color: #333;
+        }
+        #main h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+        .info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s;
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .info div {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 5px;
+            min-width: 250px;
+        }
+        .info div h2 {
+            margin-top: 0;
+        }
+        .info div p {
+            margin: 0;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #333;
+            text-align: center;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s;
+        }
+        .form-container h2 {
+            margin-top: 0;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background: #77aaff;
+        }
+        .resume-button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .resume-button {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .resume-button:hover {
+            background: #77aaff;
+        }
+        .profile-pic {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .profile-pic img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            transition: transform 0.3s ease;
+        }
+        .profile-pic img:hover {
+            transform: scale(1.2);
+        }
+        .bio {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            animation: fadeIn 2s;
+        }
+        .bio h2 {
+            margin-top: 0;
+        }
+        .social-icons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .social-icons a {
+            color: #333;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #77aaff;
+        }
+        .testimonials {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            animation: fadeIn 2s;
+        }
+        .testimonials h2 {
+            margin-top: 0;
+        }
+        .testimonial {
+            margin-bottom: 20px;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .testimonial .author {
+            font-weight: bold;
+            text-align: right;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+            animation: fadeInUp 1s;
+        }
+        .skill {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            width: calc(25% - 20px);
+            transition: transform 0.3s ease;
+        }
+        .skill:hover {
+            transform: scale(1.05);
+        }
+        .skill i {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            height: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .progress {
+            background-color: #77aaff;
+            border-radius: 10px;
+            height: 10px;
+            width: 0;
+            transition: width 1s ease-in-out;
+        }
+        .project-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .project {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px;
+            width: calc(33.33% - 20px);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+        }
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .project h3 {
+            margin: 10px 0;
+        }
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        .project-link:hover {
+            background-color: #555;
+        }
+        .dark-mode .project-link {
+            background-color: #77aaff;
+            color: #333;
+        }
+        .dark-mode .project-link:hover {
+            background-color: #5588dd;
+        }
+        @media (max-width: 768px) {
+            .project {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .project {
+                width: 100%;
+            }
+        }
+        @media (max-width: 768px) {
+            header nav {
+                float: none;
+                text-align: center;
+            }
+            header ul {
+                padding: 0;
+            }
+            header li {
+                float: none;
+                display: block;
+                padding: 10px 0;
+            }
+            #showcase h1 {
+                font-size: 40px;
+            }
+            #showcase p {
+                font-size: 18px;
+            }
+            .info {
+                flex-direction: column;
+            }
+            .info div {
+                margin: 10px 0;
+            }
+        }
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        #backToTop:hover {
+            background-color: #77aaff;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <button class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon" id="darkModeIcon"></i> <span id="darkModeText">Dark Mode</span>
+    </button>
+    <button onclick="topFunction()" id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <div id="loader" class="loader"></div>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>K S Sreehari Sharma</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#showcase">Home</a></li>
+                    <li><a href="#main">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Welcome to My Professional Website</h1>
+            <p>To work in a healthy, innovative and challenging environment extracting the best out of me, which is conducive to learn and grow at professional as well as personal level thereby directing my future endeavors as an asset to the organization.</p>
+            <a href="#contact" class="button">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="container">
+            <h1>About Me</h1>
+            <div class="profile-pic">
+                <img src="C:\Users\K S SREE HARI\Desktop\AJAY\myself\images\updated pic 1.jpg" alt="K S Sreehari Sharma">
+            </div>
+            <div class="bio">
+                <h2>Bio</h2>
+                <p>Hello! I am K S Sreehari Sharma, a passionate cybersecurity analyst and certified ethical hacker. I have a strong background in computer applications and a keen interest in ethical hacking and cybersecurity. I am always eager to learn new technologies and take on challenging projects. My goal is to contribute to the field of cybersecurity and make the digital world a safer place.</p>
+            </div>
+            <div class="info">
+                <div>
+                    <h2>Experience</h2>
+                    <p>Student Intern at Corizo Virtual CyberSecurity (02/2023 - 04/2023)</p>
+                    <p>Internship at MSR EDUSOFT Virtual Python(AI/ML) (11/2022 - 03/2023)</p>
+                </div>
+                <div>
+                    <h2>Education</h2>
+                    <p>B.Com(Computer Applications) - LRG Naidu Jr College (03/2020 - 06/2023)</p>
+                    <p>Intermediate - LRG Naidu Jr College (03/2018 - 03/2020)</p>
+                    <p>SSC - Mother EM High School (03/2017 - 03/2018)</p>
+                </div>
+            </div>
+            <div class="info">
+                <div>
+                    <h2>Skills</h2>
+                    <div class="skills">
+                        <div class="skill">
+                            <i class="fas fa-laptop-code"></i>
+                            <p>Python</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fas fa-user-secret"></i>
+                            <p>Ethical Hacking</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fas fa-database"></i>
+                            <p>Oracle SQL</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fab fa-html5"></i>
+                            <p>HTML</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fab fa-css3-alt"></i>
+                            <p>CSS</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fab fa-js"></i>
+                            <p>JavaScript</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fas fa-shield-alt"></i>
+                            <p>Cybersecurity</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 88%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div>
+                    <h2>Achievements</h2>
+                    <p>Certificate from Microsoft</p>
+                    <p>Internship from Corizo</p>
+                </div>
+                <div>
+                    <h2>Passions</h2>
+                    <p>Cybersecurity Analyst</p>
+                    <p>Certified Ethical Hacker</p>
+                </div>
+                <div>
+                    <h2>Languages</h2>
+                    <p>Telugu (Native), Kannada (Native), English (Proficient), Hindi (Advanced)</p>
+                </div>
+            </div>
+            <div class="info">
+                <div>
+                    <h2>Volunteer Projects</h2>
+                    <p>Frontend Website - Kodamadagu (HTML, CSS)</p>
+                    <p>Resume Webpage - Kodamadagu (HTML, CSS)</p>
+                </div>
+                <div>
+                    <h2>Certifications</h2>
+                    <p>Microsoft Technology Associate - <b>Microsoft</b></p>
+                    <p>Ethical Hacking Essentials - <b>CodeRed</b></p>
+                    <p>Python(AI/ML) - <b>MSR EDUSOFT PVT.LTD</b></p>
+                    <p>CyberSecurity Essentials - <b>Cisco</b></p>
+                    <p>CyberSecurity Internship - <b>PaloAlto</b></p>
+                    <p>Introduction to SQL - <b>Simplilearn</b></p>
+                    <p>Oracle - <b>Success Software Academy</b></p>
+                </div>
+            </div></section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="project-gallery">
+                    <div class="project">
+                        <a href="project1.jpg" data-lightbox="projects" data-title="Project 1">
+                            <img src="project1.jpg" alt="Project 1" loading="lazy">
+                        </a>
+                        <h3>Project 1</h3>
+                        <p>Description of Project 1</p>
+                        <a href="https://github.com/yourusername/project1" target="_blank" class="project-link">GitHub Repository</a>
+                    </div>
+                    <div class="project">
+                        <a href="project2.jpg" data-lightbox="projects" data-title="Project 2">
+                            <img src="project2.jpg" alt="Project 2" loading="lazy">
+                        </a>
+                        <h3>Project 2</h3>
+                        <p>Description of Project 2</p>
+                        <a href="https://github.com/yourusername/project2" target="_blank" class="project-link">GitHub Repository</a>
+                    </div>
+                    <div class="project">
+                        <a href="project3.jpg" data-lightbox="projects" data-title="Project 3">
+                            <img src="project3.jpg" alt="Project 3" loading="lazy">
+                        </a>
+                        <h3>Project 3</h3>
+                        <p>Description of Project 3</p>
+                        <a href="https://github.com/yourusername/project3" target="_blank" class="project-link">GitHub Repository</a>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+            <div class="info">
+                <div>
+                    <h2>Contact</h2>
+                    <p>Phone: 6361619336</p>
+                    <p>Email: sreeharisharma387a@gmail.com</p>
+                </div>
+            </div>
+            <div class="form-container">
+                <h2>Contact Form</h2>
+                <form id="contactForm">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="resume-button-container">
+                <a href="resume.pdf" class="resume-button" download>Download Resume</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="testimonials">
+                <h2>Testimonials</h2>
+                <div class="testimonial">
+                    <p>"Sreehari is a dedicated and skilled professional. His expertise in cybersecurity is impressive."</p>
+                    <p class="author">- John Doe, CEO of TechCorp</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Working with Sreehari has been a pleasure. He is knowledgeable and always willing to help."</p>
+                    <p class="author">- Jane Smith, Project Manager at WebSolutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>K S Sreehari Sharma &copy; <span id="currentYear"></span></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // Function to get geolocation
+        function getGeolocation(callback) {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var latitude = position.coords.latitude;
+                    var longitude = position.coords.longitude;
+                    
+                    // Use a reverse geocoding service to get the location name
+                    fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            var city = data.address.city || data.address.town || data.address.village || '';
+                            var state = data.address.state || '';
+                            var country = data.address.country || '';
+                            var locationString = `${city}, ${state}, ${country}`.trim();
+                            callback(locationString);
+                        })
+                        .catch(error => {
+                            console.error('Error getting location:', error);
+                            callback('Location not available');
+                        });
+                }, function(error) {
+                    console.error('Error getting geolocation:', error);
+                    callback('Location not available');
+                });
+            } else {
+                callback('Geolocation not supported');
+            }
+        }
+
+        // Modify the existing submitForm function
+        function submitForm(event) {
+            event.preventDefault();
+            document.getElementById('loader').style.display = 'block';
+
+            getGeolocation(function(location) {
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var message = document.getElementById('message').value;
+                var locationField = location;
+
+                var formData = new FormData();
+                formData.append('name', name);
+                formData.append('email', email);
+                formData.append('message', message);
+                formData.append('location', locationField);
+
+                fetch('https://formspree.io/f/xoqoqwkz', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    document.getElementById('loader').style.display = 'none';
+                    if (response.ok) {
+                        document.getElementById('contact-form').reset();
+                        alert('Thanks for your message. I will get back to you soon!');
+                    } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                alert(data["errors"].map(error => error["message"]).join(", "));
+                            } else {
+                                alert('Oops! There was a problem submitting your form');
+                            }
+                        });
+                    }
+                }).catch(error => {
+                    document.getElementById('loader').style.display = 'none';
+                    alert('Oops! There was a problem submitting your form');
+                });
+            });
+        }
+    // Auto update year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+    const darkModeIcon = document.getElementById('darkModeIcon');
+    const darkModeText = document.getElementById('darkModeText');
+
+    function updateDarkModeAppearance(isDarkMode) {
+        darkModeIcon.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+        darkModeText.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+        body.classList.toggle('dark-mode', isDarkMode);
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+        const isDarkMode = !body.classList.contains('dark-mode');
+        updateDarkModeAppearance(isDarkMode);
+        localStorage.setItem('darkMode', isDarkMode);
+    });
+
+    // Check for saved dark mode preference
+    if (localStorage.getItem('darkMode') === 'true') {
+        updateDarkModeAppearance(true);
+    }
+
+    // Back to Top button
+    const backToTopButton = document.getElementById("backToTop");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    // Animate progress bars
+    function animateProgressBars() {
+        const progressBars = document.querySelectorAll('.progress');
+        progressBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0%';
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 100);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Animate progress bars on load
+        animateProgressBars();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission and Telegram bot integration
+        const form = document.getElementById('contactForm');
+        const loader = document.getElementById('loader');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            loader.style.display = 'block';
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            // Get Date and Time of Submission
+            const dateTime = new Date().toLocaleString();
+
+            // Get Network and Device Information
+            const userAgent = navigator.userAgent;
+            const platform = navigator.platform;
+            const language = navigator.language;
+
+            // Prepare base message for Telegram
+            let telegramMessage = `New Contact Form Submission:
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Message: ${message}
+Date: ${dateTime}
+Device: ${userAgent}
+Platform: ${platform}
+Language: ${language}`;
+
+            // Function to send the message with geolocation
+            const sendMessageWithGeolocation = (latitude, longitude) => {
+                // Get IP Address and location information
+                Promise.all([
+                    fetch('https://api.ipify.org?format=json').then(response => response.json()).catch(() => ({ ip: 'Error fetching' })),
+                    fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=26f4a3e6b2f5413c8d3c4f6b7e8d9a10`).then(response => response.json()).catch(() => ({ results: [{ components: {} }] }))
+                ])
+                .then(([ipData, locationData]) => {
+                    const ipAddress = ipData.ip;
+                    const locationInfo = locationData.results[0]?.components || {};
+                    const city = locationInfo.city || locationInfo.town || 'Unknown';
+                    const state = locationInfo.state || 'Unknown';
+                    const country = locationInfo.country || 'Unknown';
+
+                    telegramMessage = `Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Message: ${message}
+Date: ${dateTime}
+IP: ${ipAddress}
+Device: ${userAgent}
+Platform: ${platform}
+Language: ${language}
+Location: ${city}, ${state}, ${country}
+Latitude: ${latitude}
+Longitude: ${longitude}`;
+
+                    sendToTelegram(telegramMessage);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    telegramMessage += `
+IP: Error fetching
+Location: Error fetching`;
+                    sendToTelegram(telegramMessage);
+                });
+            };
+
+            // Ask for geolocation permission
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+                        sendMessageWithGeolocation(latitude, longitude);
+                    },
+                    function(error) {
+                        console.error('Geolocation error:', error);
+                        telegramMessage += `
+Geolocation: Permission denied or error`;
+                        sendMessageWithGeolocation('Not available', 'Not available');
+                    },
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 5000,
+                        maximumAge: 0
+                    }
+                );
+            } else {
+                telegramMessage += `
+Geolocation: Not supported by browser`;
+                sendMessageWithGeolocation('Not supported', 'Not supported');
+            }
+        });
+
+        function sendToTelegram(telegramMessage) {
+            // Telegram bot token and chat ID
+            const botToken = '6371517928:AAHdut4c9BMJG7ovw8T6RWWRSP9oCDphcG0';
+            const chatId = '5269480673';
+
+            // Send data to Telegram bot
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: telegramMessage,
+                }),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                loader.style.display = 'none';
+                if (data.ok) {
+                    alert('Message sent successfully!');
+                    form.reset();
+                } else {
+                    throw new Error('Failed to send message to Telegram');
+                }
+            })
+            .catch(error => {
+                loader.style.display = 'none';
+                console.error('Error:', error);
+                alert(`Error sending message: ${error.message}. Please try again.`);
+            });
+        }
+    });
+    </script>
+</body>
+</html>
+
