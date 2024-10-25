@@ -2,3 +2,7 @@
 127.0.0.1 - - [25/Oct/2024 17:06:20] "GET /porttele54.html HTTP/1.1" 200 -
 127.0.0.1 - - [25/Oct/2024 17:06:20] code 404, message File not found
 127.0.0.1 - - [25/Oct/2024 17:06:20] "GET /styles.css HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2024 17:06:21] code 404, message File not found
+127.0.0.1 - - [25/Oct/2024 17:06:21] "GET /showcase.jpg HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2024 17:06:21] code 404, message File not found
+127.0.0.1 - - [25/Oct/2024 17:06:21] "GET /favicon.png HTTP/1.1" 404 -
