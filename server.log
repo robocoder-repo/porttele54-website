@@ -23,3 +23,4 @@
 127.0.0.1 - - [25/Oct/2024 17:09:29] "GET /project2.jpg HTTP/1.1" 404 -
 127.0.0.1 - - [25/Oct/2024 17:09:29] code 404, message File not found
 127.0.0.1 - - [25/Oct/2024 17:09:29] "GET /project3.jpg HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2024 17:18:37] "HEAD / HTTP/1.1" 200 -
