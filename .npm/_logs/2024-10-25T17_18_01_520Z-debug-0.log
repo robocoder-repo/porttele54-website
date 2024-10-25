@@ -8,3 +8,73 @@
 7 verbose argv "install" "--global" "surge"
 8 verbose logfile logs-max:10 dir:/home/user/.npm/_logs/2024-10-25T17_18_01_520Z-
 9 verbose logfile /home/user/.npm/_logs/2024-10-25T17_18_01_520Z-debug-0.log
+10 silly packumentCache heap:2114453504 maxSize:528613376 maxEntrySize:264306688
+11 silly logfile done cleaning log files
+12 silly idealTree buildDeps
+13 silly fetch manifest surge@*
+14 silly packumentCache full:https://registry.npmjs.org/surge cache-miss
+15 http fetch GET 200 https://registry.npmjs.org/surge 158ms (cache miss)
+16 silly packumentCache full:https://registry.npmjs.org/surge set size:undefined disposed:false
+17 silly placeDep ROOT surge@0.24.6 OK for:  want: *
+18 silly fetch manifest babar@^0.2.0
+19 silly packumentCache full:https://registry.npmjs.org/babar cache-miss
+20 silly fetch manifest cli-table3@0.6.1
+21 silly packumentCache full:https://registry.npmjs.org/cli-table3 cache-miss
+22 silly fetch manifest colors@1.4.0
+23 silly packumentCache full:https://registry.npmjs.org/colors cache-miss
+24 silly fetch manifest human-readable-numbers@^0.9.5
+25 silly packumentCache full:https://registry.npmjs.org/human-readable-numbers cache-miss
+26 silly fetch manifest prompts@*
+27 silly packumentCache full:https://registry.npmjs.org/prompts cache-miss
+28 silly fetch manifest is-domain@0.0.1
+29 silly packumentCache full:https://registry.npmjs.org/is-domain cache-miss
+30 silly fetch manifest minimist@1.2.6
+31 silly packumentCache full:https://registry.npmjs.org/minimist cache-miss
+32 http fetch GET 200 https://registry.npmjs.org/is-domain 90ms (cache miss)
+33 silly packumentCache full:https://registry.npmjs.org/is-domain set size:undefined disposed:false
+34 silly fetch manifest moniker@0.1.2
+35 silly packumentCache full:https://registry.npmjs.org/moniker cache-miss
+36 http fetch GET 200 https://registry.npmjs.org/prompts 112ms (cache miss)
+37 silly packumentCache full:https://registry.npmjs.org/prompts set size:undefined disposed:false
+38 silly fetch manifest netrc@0.1.4
+39 silly packumentCache full:https://registry.npmjs.org/netrc cache-miss
+40 http fetch GET 200 https://registry.npmjs.org/colors 122ms (cache miss)
+41 silly packumentCache full:https://registry.npmjs.org/colors set size:undefined disposed:false
+42 silly fetch manifest progress@2.0.3
+43 silly packumentCache full:https://registry.npmjs.org/progress cache-miss
+44 http fetch GET 200 https://registry.npmjs.org/minimist 125ms (cache miss)
+45 silly packumentCache full:https://registry.npmjs.org/minimist set size:undefined disposed:false
+46 silly fetch manifest read@1.0.5
+47 silly packumentCache full:https://registry.npmjs.org/read cache-miss
+48 http fetch GET 200 https://registry.npmjs.org/moniker 50ms (cache miss)
+49 silly packumentCache full:https://registry.npmjs.org/moniker set size:undefined disposed:false
+50 silly fetch manifest request@^2.88.0
+51 silly packumentCache full:https://registry.npmjs.org/request cache-miss
+52 http fetch GET 200 https://registry.npmjs.org/human-readable-numbers 146ms (cache miss)
+53 silly packumentCache full:https://registry.npmjs.org/human-readable-numbers set size:undefined disposed:false
+54 silly fetch manifest surge-ignore@0.2.0
+55 silly packumentCache full:https://registry.npmjs.org/surge-ignore cache-miss
+56 http fetch GET 200 https://registry.npmjs.org/netrc 43ms (cache miss)
+57 silly packumentCache full:https://registry.npmjs.org/netrc set size:undefined disposed:false
+58 silly fetch manifest surge-sdk@0.6.4
+59 silly packumentCache full:https://registry.npmjs.org/surge-sdk cache-miss
+60 http fetch GET 200 https://registry.npmjs.org/cli-table3 170ms (cache miss)
+61 silly packumentCache full:https://registry.npmjs.org/cli-table3 set size:undefined disposed:false
+62 silly fetch manifest surge-stream@0.6.4
+63 silly packumentCache full:https://registry.npmjs.org/surge-stream cache-miss
+64 http fetch GET 200 https://registry.npmjs.org/progress 50ms (cache miss)
+65 silly packumentCache full:https://registry.npmjs.org/progress set size:undefined disposed:false
+66 silly fetch manifest url-parse-as-address@1.0.0
+67 silly packumentCache full:https://registry.npmjs.org/url-parse-as-address cache-miss
+68 http fetch GET 200 https://registry.npmjs.org/read 66ms (cache miss)
+69 silly packumentCache full:https://registry.npmjs.org/read set size:undefined disposed:false
+70 silly fetch manifest xbytes@^1.7.0
+71 silly packumentCache full:https://registry.npmjs.org/xbytes cache-miss
+72 http fetch GET 200 https://registry.npmjs.org/surge-ignore 57ms (cache miss)
+73 silly packumentCache full:https://registry.npmjs.org/surge-ignore set size:undefined disposed:false
+74 http fetch GET 200 https://registry.npmjs.org/request 73ms (cache miss)
+75 silly packumentCache full:https://registry.npmjs.org/request set size:undefined disposed:false
+76 http fetch GET 200 https://registry.npmjs.org/surge-sdk 65ms (cache miss)
+77 silly packumentCache full:https://registry.npmjs.org/surge-sdk set size:undefined disposed:false
+78 http fetch GET 200 https://registry.npmjs.org/url-parse-as-address 51ms (cache miss)
+79 silly packumentCache full:https://registry.npmjs.org/url-parse-as-address set size:undefined disposed:false
