@@ -27,3 +27,7 @@
 127.0.0.1 - - [25/Oct/2024 17:19:47] "GET / HTTP/1.1" 200 -
 127.0.0.1 - - [25/Oct/2024 17:19:48] code 404, message File not found
 127.0.0.1 - - [25/Oct/2024 17:19:48] "GET /styles.css HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2024 17:19:48] code 404, message File not found
+127.0.0.1 - - [25/Oct/2024 17:19:48] "GET /showcase.jpg HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2024 17:19:48] code 404, message File not found
+127.0.0.1 - - [25/Oct/2024 17:19:48] "GET /favicon.png HTTP/1.1" 404 -
