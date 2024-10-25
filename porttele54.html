@@ -459,7 +459,42 @@
         #backToTop:hover {
             background-color: #77aaff;
         }
-    </style>
+    
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .theme-toggle__input {
+            display: none;
+        }
+        .theme-toggle__label {
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+            background-color: #ccc;
+            border-radius: 25px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle__label span {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 21px;
+            height: 21px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        .theme-toggle__input:checked + .theme-toggle__label {
+            background-color: #77aaff;
+        }
+        .theme-toggle__input:checked + .theme-toggle__label span {
+            transform: translateX(25px);
+        }
+</style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 <body>
@@ -481,7 +516,14 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-toggle" class="theme-toggle__input">
+                <label for="theme-toggle" class="theme-toggle__label">
+                    <span></span>
+                </label>
+            </div>
+</header>
 
     <section id="showcase">
         <div class="container">
@@ -967,6 +1009,19 @@ Geolocation: Not supported by browser`;
             });
         }
     });
+    </script>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+            }
+        });
     </script>
 </body>
 </html>
