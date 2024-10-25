@@ -6,3 +6,5 @@
 127.0.0.1 - - [25/Oct/2024 17:06:21] "GET /showcase.jpg HTTP/1.1" 404 -
 127.0.0.1 - - [25/Oct/2024 17:06:21] code 404, message File not found
 127.0.0.1 - - [25/Oct/2024 17:06:21] "GET /favicon.png HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2024 17:06:27] code 404, message File not found
+127.0.0.1 - - [25/Oct/2024 17:06:27] "GET /project1.jpg HTTP/1.1" 404 -
